@@ -1,0 +1,29 @@
+.wallet_img image {
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 40rpx;
+}
+.wallet_img {
+  text-align: center;
+}
+.wallet_my {
+  text-align: center;
+}
+.wallet_button {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.wallet_num {
+  margin-bottom: 50rpx;
+  font-size: 50rpx;
+}
+.wallet_text {
+  font-size: 28rpx;
+
+}
+.wallet_button button {
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 0;
+}

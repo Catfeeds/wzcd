@@ -1,0 +1,68 @@
+page {
+  font-size: 25rpx;
+  padding: 30rpx 60rpx;
+  box-sizing: border-box;
+  background: #F1F1F1;
+  font-family: "微软雅黑";
+}
+
+.title {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #B9B9B9;
+}
+.title view {
+  width: 35%;
+  height: 1px;
+  background: #B9B9B9;
+}
+.charge {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 30rpx;
+  box-shadow:2px 2px 5px 5px #ccc;
+}
+.content_top {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0rpx;
+  font-size: 28rpx;
+}
+.content_top_1 {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color:  #B9B9B9;
+  margin-bottom: 7rpx;
+}
+.color {
+  color: #FC8B01;
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}
+.radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  color: #B9B9B9;
+}
+.radio image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right:20rpx;
+}
+.button button {
+  background: #FC8A02;
+  color: #fff;
+  height: 70rpx;
+  font-size: 30rpx;
+  margin-top: 80rpx;
+}

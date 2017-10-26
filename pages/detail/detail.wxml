@@ -1,0 +1,24 @@
+<view class="detail">
+  <view class="nodata" wx:if="{{list==''}}">没有找到相关数据 ~~ </view>
+  <view class="detail_big" wx:for="{{list}}" wx:if="{{list.length>0}}">
+    <view class="detail_time">{{item.addtime}}</view>
+    <view class="detail_number" style="margin-bottom:10rpx;">
+        <text class="color"></text>
+        <view class="detail_number_left">订单编号:</view>
+        <view class="number">{{item.order_sn}}</view>
+    </view>
+    <view class="detail_money">
+    <view class="detail_number">
+        <text class="color" style="background:#E99863;"></text>
+        <view class="detail_number_left">订单描述:</view>
+        <view class="number">{{item.desc}}</view>
+    </view>
+    <view class="detail_number" style="margin-left:50rpx;">
+        <text class="color" style="background:#62A593;"></text>
+        <view class="detail_number_left">订单金额:</view>
+        <view class="number">{{item.money}}元</view>
+    </view>
+    </view>
+  </view>
+
+</view>

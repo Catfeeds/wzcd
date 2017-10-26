@@ -1,0 +1,126 @@
+.userinfo {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+/*2*/
+
+.input-placeholder {
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  text-align: left;
+}
+
+.aff {
+}
+
+.cont_a {
+  width: 588rpx;
+  margin: 0 auto;
+  height: 77rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  /*border-radius: 10rpx;*/
+  border-bottom: 1rpx solid #ccc;
+  text-align: center;
+}
+
+.cont_a .hh {
+  text-align: center;
+}
+
+.a {
+  text-align: center;
+}
+
+.plpl {
+  position: absolute;
+  right: 80rpx;
+  height: 77rpx;
+  line-height: 77rpx;
+  width: 150rpx;
+}
+
+.cont_a .gh {
+  font-size: 28rpx;
+  text-align: center;
+  width: 20%;
+}
+
+.png {
+  width: 50rpx;
+  height: 50rpx;
+  padding-left: 20rpx;
+}
+
+.img {
+  width: 70rpx;
+  height: 60rpx;
+}
+
+.int {
+  border: 1rpx solid #ccc;
+  padding: 10rpx 10rpx;
+  font-family: '微软雅黑';
+}
+
+.ren {
+  /*width: 88%;*/
+  background: #f01825;
+  color: #fff;
+}
+
+.ce {
+  color: #666;
+  padding-top: 50rpx;
+  font-size: 32rpx;
+}
+
+.ji {
+  font-size: 22rpx;
+  text-align: center;
+  background: #ededed;
+  height: 100%;
+  color: #000;
+  border-left:1rpx solid #ccc;
+   border-right:1rpx solid #ccc;
+}
+
+.zc {
+width:149rpx;
+height:80rpx;
+  position: absolute;
+  background: #000;
+  opacity: 0;
+}
+
+/*2*/
+
+.yanzheng {
+font-size: 26rpx;
+  margin: 0 auto;
+  background: #43e5f0;
+  border: 1rpx solid #999;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 588rpx;
+  border-radius: 15rpx;
+  color: #fff;
+  margin-top: 70rpx;
+}
+.yanzheng_a{
+    width: 588rpx;
+    font-size: 28rpx;  margin: 0 auto;
+    margin-top: 26rpx;
+}

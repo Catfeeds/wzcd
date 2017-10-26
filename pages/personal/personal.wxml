@@ -1,0 +1,67 @@
+<view class="register">
+<view class="classname">
+ <text>当前状态：</text>
+ <text wx:if="{{audit==0}}">审核中</text>
+ <text wx:elif="{{audit==1}}" style="color:green;">已认证</text>
+ <text wx:elif="{{audit==2}}" style="color:red;">未通过</text>
+ <text wx:else>未提交审核</text>
+ <view>(理由/原因: {{reason}})</view>
+</view>
+    <view class="user">
+        <text style="color:#000">姓名：</text>
+        <input type="text" class="in" data-value="{{truename}}" name="truename"  bindblur="bindKeyname" value="{{truename}}"/>
+    </view>
+<!--手机-->
+    <view class="user">
+        <text style="color:#000">手机：+86</text>
+        <input type="text" class="in" data-value="{{tel}}" name="tel"  bindblur="bindTelInput" value="{{tel}}"/>
+    </view>
+
+    <view class="kk">
+        <text style="color:#000">身份证号：</text>
+        <input type="text" class="you" data-value="{{idcard}}" data-id="dao" name='idcard' bindblur='idcardInputEvent' value="{{idcard}}"/>
+    </view>
+
+    <p class='ru'>ps : 请上传身份证正反面文件</p>
+<!--注册-->
+
+<!--上传-->
+<view class="ii">( 身份证正面）</view>
+
+<view class="page-body-info">
+<!--one-->
+    <view class="kg">
+  <block wx:if="{{imageSrc}}">
+      <image src="{{imageSrc}}" class="image" mode="aspectFit"></image>
+  </block>
+ <block wx:else>
+   <view class="image-plus image-plus-nb" bindtap="chooseImage">
+      <image src="{{zheng}}" style="width:100%;height:100%" binderror="binderrorimg" data-errorimg="../../images/sssss.png" wx:if="{{zheng}}"></image>
+      <image src="{{logo}}" style="width:100%;height:100%" binderror="binderrorimg" data-errorimg="../../images/sssss.png" wx:else></image>
+   </view>
+  </block>
+      </view>
+</view>
+
+<!--上传-->
+<view class="ii">( 身份证反面）</view>
+
+<view class="page-body-info">
+<!--one-->
+    <view class="kg">
+  <block wx:if="{{images}}">
+      <image src="{{images}}" class="image" mode="aspectFit"></image>
+  </block>
+ <block wx:else>
+   <view class="image-plus image-plus-nb" bindtap="images">
+      <image src="{{fan}}" style="width:100%;height:100%" binderror="binderrorimg" data-errorimg="../../images/sssss.png" wx:if="{{fan}}"></image>
+      <image src="{{logo}}" style="width:100%;height:100%" binderror="binderrorimg" data-errorimg="../../images/sssss.png" wx:else></image>
+   </view>
+  </block>
+      </view>
+</view>
+<view class='russ'>ps : 如果您已认证，提交将会重新审核</view>
+<view class="but">
+    <button bindtap="formDataCommit" disabled="{{disabled}}" style="color:#000">      提交认证</button>
+</view>
+</view>

@@ -1,0 +1,15 @@
+<view class="submit_img">
+  <view class="submit_bor">
+    <view></view>
+    <image src="../../images/9.png"></image>
+  </view>
+</view>
+<view class="succeed">
+  <text>实名认证成功</text>
+</view>
+<view class="text">
+ <text style="color:gray;">您已实名认证成功，如需修改资料，请联系平台客服！</text>
+</view>
+<!-- <view class="button">
+  <button type="primary">重新提交</button>
+</view> -->

@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+ <view class="add" bindtap="showDialogBtn">
+  <text >请求充电</text>
+  <image class="sao" src="../../images/2.png"></image>
+</view> 
+
+<!-- <view class="add" bindtap="powerDrawer" data-statu="open" >
+  <text>请求充电</text>
+</view> -->
+
+<!-- <view class="bian" >
+   <input type='number' placeholder-class='shu' placeholder='输入充电桩编号' bindconfirm='eventHandle' confirm-type='send'/>
+</view> -->
+
+
+
+<view class="lianxi">
+  <view class="lianxi_a">
+   <text style="text-align: center" bindtap="suggest">建议反馈</text>
+
+   <text style="flex:0.4"></text>
+
+   <text style="text-align: center" bindtap="member">个人中心</text>
+</view>
+
+</view>
+
+
+
+
+
+
+
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<!-- <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+<view class="section">
+  <view class="" wx:for="{{retData}}">{{index}}:{{item}}</view>
+</view>
+</view> -->
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">扫码成功！</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" value="" placeholder="请输入序列号"></input>
+    </view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="password" maxlength="16" bindinput="inputpwdChange" class="input" value="" placeholder="请输入密码"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">我要充电</view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+.title {
+  text-align: center;
+  font-size: 26rpx;
+  color: #d2d2d2;
+}
+page {
+  font-size: 26rpx;
+  background: #EEEEEE;
+}
+.title1 {
+  font-size: 32rpx;
+  text-align: center;
+  color: green;
+  margin: 10rpx 0;
+}
+.title_time {
+  text-align: center;
+}
+.title_top {
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+.content_title {
+  height: 70rpx;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 20rpx;
+}
+.color {
+  color: #E47C6F;
+}
+.status_content {
+  background: #fff;
+  margin-top: 10rpx;
+}
+.button button {
+  background: #E47C6F;
+  width: 50%;
+  color: #fff;
+  margin-top: 50rpx;
+}
+.pad {
+  padding-left: 50rpx;
+  color: #7B7B7B;
+}

@@ -1,0 +1,10 @@
+<view class="charge">
+  <text style='color:gray;'>  充值后,您可以方便快捷的使用余额支付</text>
+</view>
+<view class="charge_input">
+  <text>输入金额：</text><input type="text" name="money" value="" bindinput='bindMoneyInput' />
+</view>
+<view class="button">
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="chargenow" hover-class="other-button-hover"> 立即充值 </button>
+</view> 

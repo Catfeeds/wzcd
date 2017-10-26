@@ -1,0 +1,59 @@
+<view class="charge">
+  <view class="title">
+    <view class="title_left"></view>
+    <text>充电详情</text>
+    <view></view>
+  </view>
+  <view class="charge_content">
+    <view class="content_top">
+      <text>电费合计</text>
+      <text>{{orderInfo.amount}}元</text>
+    </view>
+    <view class="content_top_1">
+      <text>充电电量</text>
+      <text>{{orderInfo.chong_time}}</text>
+    </view>
+    <!-- <view class="content_top_1">
+      <text>充电电量</text>
+      <text>{{orderInfo.degree}}</text>
+    </view>
+
+    <view class="content_top_1 color" style="margin-top:30rpx;">
+      <text>优惠卷抵扣</text>
+      <text>{{orderInfo.yh_price}}元</text>
+    </view>
+    <view class="content_top_1 color">
+      <text>优惠合计</text>
+      <text>{{orderInfo.yh_price}}元</text>
+    </view> -->
+  </view>
+  <!-- <view class="title" style="margin: 50rpx 0;">
+    <view class="title_left"></view>
+    <text>支付方式</text>
+    <view></view>
+  </view>
+  <radio-group class="radio_group" bindchange="radioChange">
+    <view class="radio">
+      <view class="radio_top">
+        <image src="../../images/10.png"></image>
+        <text>微信支付</text>
+      </view>
+      <label>
+        <radio color="#FC8A02" name="paytype" value="weixin"/>
+      </label>
+    </view>
+    <view class="radio">
+      <view class="radio_top">
+        <image src="../../images/11.png"></image>
+        <text>余额支付</text>
+      </view>
+      <label>
+        <radio color="#FC8A02" name="paytype" value="amount" />
+      </label>
+    </view>
+  </radio-group> -->
+  <view class="button">
+    <button bindtap='payorder' data-ordersn='{{orderInfo.order_sn}}'>确认支付</button>
+  </view>
+
+</view>

@@ -1,0 +1,68 @@
+.issue {
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+  background: #eee;
+  color: #8a8a8a;
+}
+view {
+   font-size: 26rpx; 
+  font-family: "微软雅黑";
+}
+.type_function {
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.text {
+  margin-left: 20rpx;
+  color: #8a8a8a;
+}
+.type_function icon {
+   margin-top: 16rpx; 
+}
+.describe {
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+  background: #eee;
+  color: #8a8a8a;
+}
+textarea {
+  border-bottom: 2rpx solid #eee;
+  height: 200rpx;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+  padding: 10rpx;
+}
+.phone_hao {
+  padding: 0 20rpx;
+  border-right: 1rpx solid #eee;
+  color: #8a8a8a;
+}
+.phone {
+  display: flex;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.phone input {
+  height: 85rpx;
+  width: 200px;
+  padding-left: 20rpx;
+}
+.button button {
+  background: #eee;
+  color: #fff;
+}
+.button {
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,48 @@
+<view class="title_top">
+  <view class="title">
+    <text>充电状态</text>
+  </view>
+  <view class="title1">
+    <text>正在充电</text>
+  </view>
+  <view class="title_time">
+    <text>充电时间：2017-9-22 10:59:31</text>
+  </view>
+</view> 
+<view class="status_content">
+  <view class="content_title">
+    <text>充电信息</text>
+  </view>
+  <view class="content_title pad">
+    <text>充电时长</text>
+    <text class="color">0分钟</text>
+  </view>
+  <view class="content_title pad">
+    <text>电量</text>
+    <text class="color">10kw.h</text>
+  </view>
+  <view class="content_title pad">
+    <text>预充金额</text>
+    <text class="color">￥0.00</text>
+  </view>
+  <view class="content_title pad">
+    <text>当前金额</text>
+    <text class="color">￥0.00</text>
+  </view>
+</view>
+<view class="status_content">
+  <view class="content_title">
+    <text>会员信息</text>
+  </view>
+  <view class="content_title pad">
+    <text>充电车型</text>
+    <text >宝马</text>
+  </view>
+  <view class="content_title pad">
+    <text>车牌号</text>
+    <text>*********</text>
+  </view>
+</view>
+<view class="button">
+  <button>按钮</button>
+</view>

@@ -1,0 +1,43 @@
+.submit_bor view{
+  width: 110rpx;
+  height: 110rpx;
+  background: #eee;
+  border-radius: 50%;
+  text-align: center;
+}
+.submit_bor image {
+  width: 170rpx;
+  height: 130rpx;
+  position: absolute;
+  bottom: 5rpx;
+  left: 0rpx;
+}
+.submit_bor {
+  position: relative;
+  width: 110rpx;
+  height: 110rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+.submit_img {
+ margin-top: 100rpx;
+}
+.succeed {
+
+ text-align: center;
+ margin-top: 50rpx;
+}
+.text {
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+}
+.button button {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+.button {
+  margin-top: 50rpx;
+  padding: 0 70rpx;
+}

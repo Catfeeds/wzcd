@@ -1,0 +1,17 @@
+<view class="payment_title">
+  <text>支付押金</text>
+  <text class="money">
+    ￥600.00
+  </text>
+</view>
+<view class="deadline mar">
+  <text>押金金额</text>
+  <text class="deadline_color">￥500.00</text>
+</view>
+<view class="deadline">
+  <text>余额充值</text>
+  <text class="deadline_color">￥100.00</text>
+</view>
+<view class="button">
+  <button type="primary" bindtap='wxpay'>立即支付</button>
+</view>

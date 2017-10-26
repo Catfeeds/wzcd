@@ -1,0 +1,44 @@
+<!--头部  -->
+<view class="personal">
+  <view class="personal_img">
+   <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="personal_name">
+    <view>{{userInfo.nickName}}</view>
+    <image src="../../images/5.png" wx:if="{{userType>0}}"></image>
+  </view>
+</view>
+<!-- 充电信息 -->
+<view class="per_bottom">
+  <view class="per_score">
+    <view class="per_bottom_score active">{{info.amount}}</view>
+    <view class="per_bottom_score ">钱包余额</view>
+  </view>
+  <view class="per_score">
+    <view class="per_bottom_score active">{{info.charge}}</view>
+    <view class="per_bottom_score">总充电量</view>
+  </view>
+  <view class="per_score">
+    <view class="per_bottom_score active">{{info.cash_money}}</view>
+    <view class="per_bottom_score">押金</view>
+  </view>
+</view>
+<!-- 底部 -->
+<view class="personal_bottom">
+  <navigator url="../wallet/wallet" class="wallet" style='border-top:2rpx solid #eee'>
+    <view class="personal_bottom_left">余额充值</view>
+    <view class="personal_bottom_right" style="color:gray;">></view>
+  </navigator>
+  <navigator url="../record/record" class="wallet">
+    <view class="personal_bottom_left">充电记录</view>
+    <view class="personal_bottom_right" style="color:gray;">></view>
+  </navigator>
+ <navigator url="{{url}}" class="wallet">
+    <view class="personal_bottom_left">实名认证</view>
+    <view class="personal_bottom_right" style="color:gray;">></view>
+  </navigator>
+  <navigator url="../mycar/mycar" class="wallet">
+    <view class="personal_bottom_left">我的车库</view>
+    <view class="personal_bottom_right" style="color:gray;">></view>
+  </navigator>
+</view>

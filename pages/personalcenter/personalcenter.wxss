@@ -1,0 +1,66 @@
+/* 头部 */
+.personal {
+  padding-top: 50rpx;
+  /* background: #75d4ca; */
+  border-bottom: 5rpx solid #eee;
+}
+.personal_img image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.personal_img {
+  text-align: center;
+}
+.personal_name {
+  text-align: center;
+  margin-top: 20rpx;
+  padding-bottom: 30rpx;
+}
+.personal_name view {
+  display: inline-block;
+}
+.personal_name image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+view {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+/*充电信息  */
+.per_bottom {
+  height: 50px;
+  width: 100%;
+  flex-grow: 1;
+  padding-bottom: 10rpx;
+}
+ .per_score {
+  width: 33.3%;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+} 
+.per_bottom_score {
+  margin: 5px 0;
+}
+.active {
+  color: red;
+}
+/* 底部 */
+.wallet {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.personal_bottom {
+  margin-top: 20rpx;
+}
+.wallet view{
+  display: inline-block;
+}
+.personal_bottom_right {
+  float: right;
+}

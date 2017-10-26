@@ -1,0 +1,29 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/submit/submit",
+    "pages/personal/personal",
+    "pages/personalcenter/personalcenter",
+    "pages/record/record",
+    "pages/suggest/suggest",
+    "pages/menber/menber",
+    "pages/wallet/wallet",
+    "pages/applycharge/applycharge",
+    "pages/Charge/Charge",
+    "pages/status/status",
+    "pages/detail/detail",
+    "pages/chargeMoney/chargeMoney",
+    "pages/audit/audit",
+    "pages/payment/payment",
+    "pages/mycar/mycar",
+    "pages/mycar/addcar",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "万众充电",
+    "navigationBarTextStyle":"black"
+  }
+}

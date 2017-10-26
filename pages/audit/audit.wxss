@@ -1,0 +1,50 @@
+.audit_img {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+}
+
+.audit_img image {
+  width: 118rpx;
+  height: 118rpx;
+ margin-top: 7rpx;
+}
+.audit_text {
+  text-align: center;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+}
+.audit_top {
+  margin-top: 70rpx;
+
+}
+page {
+  font-family: "微软雅黑";
+}
+.audit_bottom {
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+
+}
+.audit_bottom > text {
+  width: 55%;
+  display: inline-block;
+
+}
+.audit_bottom > text text {
+  color: #FF0000;
+}
+.audit_button {
+  margin-top: 50rpx;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+.audit_button button {
+  background: #83c6c2; 
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  width:60%;
+  font-size: 32rpx;
+}

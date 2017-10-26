@@ -1,0 +1,237 @@
+page {
+  background: #f2f2f2;
+  font-family: '微软雅黑';
+}
+
+swiper {
+  width: 660rpx;
+  height: 680rpx;
+  margin: 0 auto;
+  margin-top: 36rpx;
+  border-radius: 6rpx;
+  -webkit-box-shadow: 0 0 15rpx rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+
+.swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 660rpx;
+  height: 660rpx;
+  border-radius: 6rpx;
+}
+
+.add {
+  width: 560rpx;
+  background: #43e5f0;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 55rpx;
+  margin-top: 130rpx;
+  -webkit-box-shadow: 0 0 3rpx rgba(0, 0, 0, 0.5);
+}
+
+.add text {
+  font-size: 50rpx;
+  color: #fff;
+  font-weight: 700;
+  padding: 0 20rpx;
+}
+
+.sao {
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.bian {
+  width: 40%;
+  border-bottom: 1rpx solid #999;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.bian input {
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.shu {
+  font-size: 30rpx;
+  text-align: center;
+  font-family: '微软雅黑';
+}
+
+.lianxi {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+
+.lianxi_a {
+  display: flex;
+  font-size: 28rpx;
+  width: 100%;
+  padding: 20rpx 0;
+}
+
+.lianxi text {
+  flex: 0.3;
+
+}
+
+
+
+
+
+
+/*mask*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: -1rpx;
+  z-index: 1001;
+  /*background: #;*/
+  margin: -150px 50rpx 0 0rpx;
+  border-radius: 3px;
+  font-family: '微软雅黑';
+  height:523rpx;
+
+
+}
+
+.drawer_title {
+  padding: 15px;
+  font: 35rpx ;
+  text-align: center;
+}
+
+.drawer_content {
+  height: 210px;
+  overflow-y: scroll;
+  font-size: 30rpx;
+  margin: 0 52rpx;
+}
+
+.drawer_content view {
+  padding: 10rpx 0;
+}
+
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+
+.section{
+   background: #fff;
+   width:80%;
+   height: 100%;
+   margin: 0 auto;
+   text-align: center;
+   word-wrap:break-word;
+
+}

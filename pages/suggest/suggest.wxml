@@ -1,0 +1,45 @@
+<view class="issue">
+  问题类型
+</view>
+<form bindsubmit="save"> 
+<view class="type" bindtap="type">
+  <view class="type_function">
+    <view class="type_text">
+      <text>功能异常</text><text class="text">正常充电流程有异常</text>
+    </view>
+    <view class="icon">
+      <icon type="circle" hidden="{{display0}}" id="0"/>
+      <icon type="success_circle" hidden="{{displayId0}}" id="0"/>
+    </view>
+  </view>
+  <view class="type_function">
+    <view class="type_text">
+      <text>使用建议</text><text class="text">用得不满意就的地方尽管提</text>
+    </view>
+    <view class="icon">
+      <icon type="circle" hidden="{{display1}}" id="1"/>
+      <icon type="success_circle" hidden="{{displayId1}}" id="1"/>
+    </view>
+  </view>
+  <view class="type_function">
+    <view class="type_text">
+      <text>平台不足</text><text class="text">平台还可以有的新功能</text>
+    </view>
+    <view class="icon">
+      <icon type="circle"  hidden="{{display2}}" id="2"/>
+      <icon type="success_circle" hidden="{{displayId2}}" id="2"/>
+    </view>
+  </view>
+</view>
+<view class="describe">
+  描述
+</view>
+<textarea name="con" placeholder="在这里请尽情留下您的想法、建议和期望" />
+<view class="phone">
+  <view class="phone_hao">联系方式</view>
+  <input type="text" name="contact" placeholder="邮箱或手机号，方便我们更快回复您"/>
+</view>
+<view class="button">
+  <button type="plain" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" form-type="submit"> 提交 </button>
+</view>
+</form>

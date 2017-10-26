@@ -1,0 +1,40 @@
+page {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.payment_title {
+  text-align: center;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #ccc;
+}
+.money {
+  font-size: 60rpx;
+  color: #cd3723;
+  margin-top: 30rpx;
+}
+.deadline {
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.deadline text {
+  width: 50%;
+}
+.deadline_color {
+  color: #999;
+}
+.mar {
+  margin-top: 20rpx;
+}
+.button {
+  margin-top: 50rpx;
+}
+.button button {
+  color: #fff;
+  width: 70%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}

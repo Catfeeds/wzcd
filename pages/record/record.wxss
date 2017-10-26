@@ -1,0 +1,53 @@
+view {
+  font-size: 28rpx;
+  font-family: "宋体";
+}
+.record_tiem {
+  display: flex;
+}
+.record_year {
+  margin-right: 15rpx;
+}
+.record image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx
+}
+.classname view{
+  display: inline-block;
+}
+.expenditure view{
+  display: inline-block;
+}
+.tiem {
+  display: flex;
+  margin-top: 10rpx;
+  color:#8a8a8a;
+}
+.tiem view {
+  display: inline-block;
+}
+.record {
+  position: relative;
+  height: 130rpx;
+  margin: 0 50rpx;
+  margin-top: 10rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.nodata {
+  margin-top:40rpx;
+  margin-left:32%;
+  color:gray;
+}
+
+.number {
+  margin-top: 10rpx;
+  color:#8a8a8a;
+}
+.time_min {
+  margin-right: 50rpx;
+}
+.data {
+  padding-top: 25rpx;
+}

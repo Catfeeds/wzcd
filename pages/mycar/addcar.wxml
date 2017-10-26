@@ -1,0 +1,24 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <input type="text" name="car_number" placeholder="车牌号" />
+    </view>
+    <view class="section">
+      <picker bindchange="bindPickerChangeBrand" value="{{brandIndex}}" range="{{brandArr}}" data-id="{{brandId[brandIndex]}}">
+        <view class="picker" style='color:gray;'>
+          选择车型：{{brandArr[brandIndex]}}
+          <input hidden="true" name="bid" value="{{brandId[brandIndex]}}"/>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <input type="text" class="ww" name="numb" placeholder="型号" />
+    </view>
+    <view>
+      <label></label>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

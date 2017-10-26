@@ -1,0 +1,23 @@
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
+
+<!--2-->
+<view class="cont_a aff" style="margin-top: 50rpx;">
+  <input class="a hh" placeholder="输入手机号码" type="number" maxlength="11" name="cb" placeholder-class='input-placeholder' />
+</view>
+<view class="cont_a">
+  <input placeholder-class='input-placeholder' class="a" type="number" name="linkTel" bindblur="blurTel" value="{{agentTel}}" maxlength="11" placeholder="输入验证码" name="ce" />
+  <view class="plpl">
+    <view class="zc" hidden="{{lol}}"> </view>
+    <view class="ji" bindtap="setVerify">
+      {{VerifyCode}}
+    </view>
+  </view>
+</view>
+<!--2-->
+
+<view class="yanzheng">验证</view>
+
+
+<view class="yanzheng_a">点击验证，即表示阅读并同意《用户注册协议》</view>

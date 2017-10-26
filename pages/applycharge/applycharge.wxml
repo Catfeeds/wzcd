@@ -1,0 +1,35 @@
+<view class="register">
+    <picker bindchange="bindChangeCourse" value="{{index}}" range="{{car}}">
+          <view class="xing">
+            车    型：{{car[index]}}
+            <!-- <input hidden="true" name="cid" value="{{car['id']}}"/> -->
+          </view>
+        </picker> <navigator url="../mycar/addcar?atype=1&ppileid={{ppileid}}"><view style="margin-left:50rpx;color:gray;">+ 增加车型</view></navigator>
+
+  <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+    <view class="picker">
+       提车时间:<text>{{time}}</text>
+    </view>
+  </picker>
+
+    <view class="kk">
+      <text style="color:#000">是否充满：</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio">
+              <radio value="1" name="ctype"/>直接充满
+          </label>
+          <label class="radio">
+              <radio value="2" name="ctype" />填写预充金额
+          </label>
+      </radio-group>
+    </view>
+
+    <view class="kk">
+      <text style="color:#000">预充金额：</text>
+      <input type="text" class="you"  name='amount' bindblur='getAmount' value="{{amount != 0?amount:''}}"/>
+    </view>
+
+<view class="but">
+    <button bindtap="send_chong" style="color:#000">发起充电</button>
+</view>
+</view>

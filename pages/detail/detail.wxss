@@ -1,0 +1,41 @@
+.detail_number {
+  display: flex;
+  align-items: center;
+  color: #909090;
+}
+.color {
+  width: 15rpx;
+  height: 15rpx;
+  background: #E45F74;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.number {
+  margin-left: 20rpx;
+}
+.detail_money {
+  display: flex;
+  align-items: center;
+}
+page {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+.detail {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.detail_big {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+.detail_time {
+  font-size: 33rpx;
+}
+
+.nodata {
+  margin-top:40rpx;
+  margin-left:32%;
+  color:gray;
+}

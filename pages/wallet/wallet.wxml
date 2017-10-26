@@ -1,0 +1,16 @@
+<view class="wallet_img">
+  <image src="../../images/lingqian.png"></image>
+</view>
+<view class="wallet_my">
+  <view class="wallet_text">我的余额</view>
+  <view class="wallet_num">￥{{amount}}</view>
+</view>
+<view class="wallet_button">
+  <button type="primary" class="button_1" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> 余额充值 </button>
+</view>
+<view class="wallet_button">
+  <button class="button_1" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="button"> 支付明细 </button>
+</view>
+

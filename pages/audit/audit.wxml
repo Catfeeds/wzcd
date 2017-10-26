@@ -1,0 +1,23 @@
+<view class="audit_top">
+  <view class="audit_img">
+    <image src="../../images/s.png" wx:if="{{userauth==2}}"></image>
+    <image src="../../images/f.png" wx:elif="{{userauth==3}}"></image>
+    <image src="../../images/a.png" wx:else></image>
+  </view>
+  <view class="audit_text">
+    <text wx:if="{{userauth==2}}">已通过</text>
+    <text wx:elif="{{userauth==3}}">未通过审核</text>
+    <text wx:else>审核中</text>
+  </view>
+  <view class="audit_bottom">
+    <text wx:if="{{userauth==2}}">您的资料已通过审核，请点击下一步进行后续操作。</text>
+    <text wx:elif="{{userauth==3}}">原因/理由：{{reason}}</text>
+    <text wx:else>您的资料已成功提交，我们会在<text>1-3个工作日内</text>将审核结果返回到当前页面。</text>
+  </view>
+</view>
+<view class="audit_button" wx:if="{{userauth==2}}">
+  <button bindtap='paymoney' style="background:#0CC803;">下一步</button>
+</view>
+<!-- <view class="audit_button" wx:if="{{userauth==3}}">
+  <button bindtap='resubmit'>重新提交资料</button>
+</view> -->
