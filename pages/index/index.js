@@ -16,7 +16,8 @@ Page({
      pwd:'',
      cplid:'',
      ppileid:0,
-     is_qing:1
+     is_qing:1,
+     is_shou:''
   },
 
   
@@ -359,10 +360,13 @@ Page({
       },
     });
     if(app.api.is_chong == 1){
-      setInterval(function () {
+      var is_shou =  setInterval(function () {
         that.login();
         that.getResult();
       }, 2000);
+      that.setData({
+        is_shou:is_shou
+      });
     }
     
    
@@ -470,7 +474,13 @@ Page({
           });
           that.makeOrder();
 
-        } else {
+        } else if(status == 2){
+          var is_shou = that.data.is_shou;
+          clearInterval(is_shou);
+          app.api.is_chong = 0;
+        } else if (status == 15) {
+          that.login();
+        }else{
           wx.showToast({
             title: res.data.err,
             duration: 2000

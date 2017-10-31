@@ -8,6 +8,7 @@ App({
     sid:'',
     is_chong:0,
     hostUrl: 'https://gzleren.com/miniwzcd/index.php',
+    is_shou:''
   },
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -17,10 +18,13 @@ App({
     wx.setStorageSync('logs', logs);
     this.getUserInfo();
     if(that.api.is_chong == 1){
-      setInterval(function () {
+      var is_shou = setInterval(function () {
         that.login();
         that.getResult();
       }, 2000);
+      that.setData({
+        is_shou:is_shou
+      });
     }
     
   },
@@ -163,7 +167,14 @@ App({
           });
           that.makeOrder();
 
-        } else {
+        } else if(status == 2){
+          app.api.is_chong = 0;
+          var is_shou = that.data.is_shou;
+          clearInterval(is_shou);
+          
+        } else if (status == 15) {
+          that.login();
+        }else {
           wx.showToast({
             title: res.data.err,
             duration: 2000

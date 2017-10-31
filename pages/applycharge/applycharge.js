@@ -24,7 +24,8 @@ Page({
     ctype:0,
     amount:0,
     ppileid:0,
-    chong_time:''
+    chong_time:'',
+    is_shou: ''
   },
 
   // 身份证正面
@@ -174,10 +175,7 @@ onLoad: function (options) {
   var objectId = options.title;
   var ppileid = options.ppileid;
   app.api.ppileid = ppileid;
-  //更改头部标题
-  wx.setNavigationBarTitle({
-    title: objectId,
-  });
+ 
   
 },
 
@@ -241,6 +239,7 @@ onShow: function () {
     });
   },
   send_chong: function (e) {
+    console.log(this.data.amount)
     var that = this;
     var car_index = that.data.index;
 
@@ -268,15 +267,20 @@ onShow: function () {
             title: res.data.err,
             duration: 2000
           });
-          setInterval(function () {
-            that.login();
+          var is_shou = setInterval(function () {
             that.getResult();
           }, 2000);
-        } else {
-          wx.showToast({
-            title: res.data.err,
-            duration: 2000
+          that.setData({
+            is_shou:is_shou
           });
+        } else {
+          console.log(res.data.err)
+          that.login();
+          // that.send_chong();
+          // wx.showToast({
+          //   title: res.data.err,
+          //   duration: 2000
+          // });
         }
       },
       fail: function (e) {
@@ -374,6 +378,7 @@ formDataCommit: function (e) {
       success: function (res) {
         var status = res.data.status;
         if (status == 1) {
+
           app.api.is_chong = 0;
           that.openDoor();
           that.setData({
@@ -382,8 +387,12 @@ formDataCommit: function (e) {
           });
         that.makeOrder();
 
-        } else {
-          
+        } else if(status == 2){
+          var is_shou = that.data.is_shou;
+          clearInterval(is_shou);
+          app.api.is_chong = 0;
+        }else if(status == 15){
+          that.login();
         }
         //endInitData
       },
