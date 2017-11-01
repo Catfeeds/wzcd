@@ -32,4 +32,8 @@
 <view class="but">
     <button bindtap="send_chong" style="color:#000">发起充电</button>
 </view>
+<view class="but" wx:if="{{degree ==  false}}">
+  <navigator url="../chargeDegree/chargeDegree"><button bindtap="send_chong" style="color:#000">充电状态</button></navigator>
+    
+</view>
 </view>

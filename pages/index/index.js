@@ -273,6 +273,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     var that = this;
     var ppileid = options.ppileid;
     app.api.ppileid = ppileid;
@@ -318,6 +319,7 @@ Page({
   },
 
   onShow:function () {
+
     var that = this;
     wx.request({
       url: app.api.hostUrl + '/Api/Index/login',
@@ -361,7 +363,6 @@ Page({
     });
     if(app.api.is_chong == 1){
       var is_shou =  setInterval(function () {
-        that.login();
         that.getResult();
       }, 2000);
       that.setData({
@@ -480,11 +481,6 @@ Page({
           app.api.is_chong = 0;
         } else if (status == 15) {
           that.login();
-        }else{
-          wx.showToast({
-            title: res.data.err,
-            duration: 2000
-          });
         }
         //endInitData
       },

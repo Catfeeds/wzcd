@@ -1,0 +1,13 @@
+<view class="degree">
+  <view>起始度数</view>
+  <view>目前度数</view>
+  <view>充电电流</view>
+</view>
+<view class="degree" style="color:red;">
+  <view wx:if="{{start != null}}">{{start}}</view>
+  <view wx:else>0</view>
+  <view wx:if="{{current != null}}">{{current}}</view>
+  <view wx:else>0</view>
+  <view wx:if="{{dianliu != null}}">{{dianliu}}</view>
+  <view wx:else>0</view>
+</view>

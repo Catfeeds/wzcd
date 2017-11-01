@@ -18,7 +18,8 @@
     "pages/payment/payment",
     "pages/mycar/mycar",
     "pages/mycar/addcar",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/chargeDegree/chargeDegree"
   ],
   "window":{
     "backgroundTextStyle":"light",

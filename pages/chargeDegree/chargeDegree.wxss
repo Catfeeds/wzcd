@@ -1,0 +1,13 @@
+.degree {
+  display: flex;
+  margin-top: 50rpx;
+}
+.degree view {
+  width: 33.33%;
+  text-align: center;
+}
+page {
+  font-size: 32rpx;
+  font-family: "微软雅黑";
+  width: 100%;
+}

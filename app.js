@@ -19,7 +19,6 @@ App({
     this.getUserInfo();
     if(that.api.is_chong == 1){
       var is_shou = setInterval(function () {
-        that.login();
         that.getResult();
       }, 2000);
       that.setData({
@@ -174,11 +173,6 @@ App({
           
         } else if (status == 15) {
           that.login();
-        }else {
-          wx.showToast({
-            title: res.data.err,
-            duration: 2000
-          });
         }
         //endInitData
       },

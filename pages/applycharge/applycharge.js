@@ -25,7 +25,8 @@ Page({
     amount:0,
     ppileid:0,
     chong_time:'',
-    is_shou: ''
+    is_shou: '',
+    degree:false
   },
 
   // 身份证正面
@@ -175,6 +176,11 @@ onLoad: function (options) {
   var objectId = options.title;
   var ppileid = options.ppileid;
   app.api.ppileid = ppileid;
+  if(app.api.is_chong == 1){
+    this.setData({
+      degree:true
+    });
+  }
  
   
 },
@@ -263,6 +269,9 @@ onShow: function () {
         console.log(res.data.car)
         if (status == 1) {
           app.api.is_chong = 1;
+          that.setData({
+            degree:true
+          });
           wx.showToast({
             title: res.data.err,
             duration: 2000
@@ -383,7 +392,8 @@ formDataCommit: function (e) {
           that.openDoor();
           that.setData({
             amount: res.data.info.amount,
-            chong_time:res.data.info.chong_time
+            chong_time:res.data.info.chong_time,
+            degree:false
           });
         that.makeOrder();
 
@@ -391,6 +401,9 @@ formDataCommit: function (e) {
           var is_shou = that.data.is_shou;
           clearInterval(is_shou);
           app.api.is_chong = 0;
+          that.setData({
+            degree:false
+          });
         }else if(status == 15){
           that.login();
         }

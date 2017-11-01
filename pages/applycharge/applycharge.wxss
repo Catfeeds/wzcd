@@ -49,7 +49,7 @@ input{
 .but{
     padding-top: 32rpx;
     text-align: center;
-    padding-bottom:80rpx;
+    /* padding-bottom:80rpx; */
 }
 .but button{
     height: 80rpx;
