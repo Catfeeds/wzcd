@@ -181,7 +181,41 @@ onLoad: function (options) {
       degree:true
     });
   }
- 
+  //判断是否有未完成的订单
+  wx.request({
+    url: app.api.hostUrl + '/Api/Index/index',
+    method: 'post',
+    data: {
+      uid: app.api.userId,
+    },
+    header: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    success: function (res) {
+      console.log(res);
+      var is_order = res.data.is_order;
+      var order_id = res.data.order_id;
+      if (is_order > 0) {
+        wx.showModal({
+          title: '提示',
+          content: '您还有一个订单未支付，是否进入完成支付？',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: '../Charge/Charge?orderId=' + order_id,
+              })
+            }
+          },
+        })
+      }
+    },
+    fail: function (e) {
+      wx.showToast({
+        title: '网络异常！',
+        duration: 2000
+      });
+    },
+  });
   
 },
 
@@ -282,7 +316,20 @@ onShow: function () {
           that.setData({
             is_shou:is_shou
           });
-        } else {
+        } else if(status == 3) {
+          var order_id = res.data.order_id;
+          wx.showModal({
+            title: '提示',
+            content: '您还有一个订单未支付，是否进入完成支付？',
+            success: function (res) {
+              if (res.confirm) {
+                wx.navigateTo({
+                  url: '../Charge/Charge?orderId=' + order_id,
+                })
+              }
+            },
+          })
+        }else {
           console.log(res.data.err)
           that.login();
           // that.send_chong();

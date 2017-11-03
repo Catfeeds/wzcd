@@ -5,16 +5,16 @@
       <view class="record_year">{{item.addtime}}</view>
       <view></view>
     </view>
-    <view class="number">充电桩编号：{{item.cplcode}}</view>
+    <!-- <view class="number">充电桩编号：{{item.cplcode}}</view> -->
     <view class="tiem">
       <view class="time_min">
       <image src="../../images/7.png"></image>
-        <view>充电时长： {{item.long_time}}</view>
+        <view>充电电量： {{item.chong_time}}</view>
       </view>
       <view class="expenditure">
         <image src="../../images/6.png"></image>
         <view wx:if="{{item.state==1}}" style="color:red;">充电中</view>
-        <view wx:else>充电费用：{{item.money}}元</view>
+        <view wx:else>充电费用：{{item.amount}}元</view>
       </view>
     </view>
    </view> 

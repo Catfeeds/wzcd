@@ -38,7 +38,8 @@ Page({
       url: app.api.hostUrl + '/Api/Order/details',
       method: 'post',
       data: {
-        userid:app.api.userid
+        userid:app.api.userId,
+        order_id:orderId
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
