@@ -468,7 +468,9 @@ Page({
         var status = res.data.status;
         if (status == 1) {
           app.api.is_chong = 0;
-          that.opanDoor();
+          var is_shou = that.data.is_shou;
+          clearInterval(is_shou);
+          // that.opanDoor();
           that.setData({
             amount: res.data.info.amount,
             chong_time: res.data.info.chong_time

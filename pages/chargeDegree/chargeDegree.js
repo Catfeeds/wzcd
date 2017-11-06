@@ -29,7 +29,7 @@ Page({
       },
       success: function (res) {
         var status = res.data.status;
-        console.log(res.data.car)
+        console.log(res.data.current)
         if (status == 1) {
           that.setData({
             current: res.data.current,

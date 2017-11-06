@@ -312,7 +312,7 @@ onShow: function () {
           });
           var is_shou = setInterval(function () {
             that.getResult();
-          }, 2000);
+          }, 15000);
           that.setData({
             is_shou:is_shou
           });
@@ -436,7 +436,11 @@ formDataCommit: function (e) {
         if (status == 1) {
 
           app.api.is_chong = 0;
-          that.openDoor();
+          var is_shou = that.data.is_shou;
+          clearInterval(is_shou);
+          // that.openDoor();
+          console.log(res.data.info.amount);
+          console.log(res.data.info.chong_time);
           that.setData({
             amount: res.data.info.amount,
             chong_time:res.data.info.chong_time,
@@ -479,6 +483,8 @@ formDataCommit: function (e) {
       },
       success: function (res) {
         var status = res.data.status;
+        var arr = res.data.arr;
+        var order_id = arr.order_id;
         if (status == 1) {
           
           wx.showModal({
@@ -486,7 +492,7 @@ formDataCommit: function (e) {
             success: function (res) {
               if (res.confirm) {
                wx.navigateTo({
-                 url: '../Charge/Charge',
+                 url: '../Charge/Charge?orderId=' + order_id,
                })
               }
             }
