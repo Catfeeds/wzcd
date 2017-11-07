@@ -1,5 +1,6 @@
 var reg = /^((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)$/;
 var app = getApp();
+var is_shou;
 Page({
   data:{
     zheng: '',
@@ -25,7 +26,7 @@ Page({
     amount:0,
     ppileid:0,
     chong_time:'',
-    is_shou: '',
+    // is_shou: '',
     degree:false
   },
 
@@ -310,12 +311,12 @@ onShow: function () {
             title: res.data.err,
             duration: 2000
           });
-          var is_shou = setInterval(function () {
+          is_shou = setInterval(function () {
             that.getResult();
-          }, 15000);
-          that.setData({
-            is_shou:is_shou
-          });
+          }, 60000);
+          // that.setData({
+          //   is_shou:is_shou
+          // });
         } else if(status == 3) {
           var order_id = res.data.order_id;
           wx.showModal({
@@ -434,22 +435,25 @@ formDataCommit: function (e) {
       success: function (res) {
         var status = res.data.status;
         if (status == 1) {
-
-          app.api.is_chong = 0;
-          var is_shou = that.data.is_shou;
-          clearInterval(is_shou);
-          // that.openDoor();
+          
           console.log(res.data.info.amount);
           console.log(res.data.info.chong_time);
           that.setData({
             amount: res.data.info.amount,
-            chong_time:res.data.info.chong_time,
-            degree:false
+            chong_time: res.data.info.chong_time,
+            degree: false
           });
-        that.makeOrder();
+          if(app.api.is_chong == 1){
+            that.makeOrder();
+          }
+          clearInterval(is_shou);
+          app.api.is_chong = 0;
+
+          
+        
 
         } else if(status == 2){
-          var is_shou = that.data.is_shou;
+          // var is_shou = that.data.is_shou;
           clearInterval(is_shou);
           app.api.is_chong = 0;
           that.setData({
@@ -498,12 +502,6 @@ formDataCommit: function (e) {
             }
           });
           return false;
-        } else {
-          wx.showToast({
-            title: res.data.err,
-            duration: 2000
-          });
-          return false;
         }
         //endInitData
       },
@@ -516,32 +514,32 @@ formDataCommit: function (e) {
       }
     })
   },
-  openDoor: function () {
-    var that = this;
-    wx.request({
-      url: app.api.hostUrl + '/Api/User/openDoor2',
-      method: 'post',
-      data: {
-        userId: app.api.userId,
-        sid: app.api.sid,
-        ppileid: app.api.ppileid,
-      },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      success: function (res) {
-        var status = res.data.status;
-        if (status == 1) {
+  // openDoor: function () {
+  //   var that = this;
+  //   wx.request({
+  //     url: app.api.hostUrl + '/Api/User/openDoor2',
+  //     method: 'post',
+  //     data: {
+  //       userId: app.api.userId,
+  //       sid: app.api.sid,
+  //       ppileid: app.api.ppileid,
+  //     },
+  //     header: {
+  //       'Content-Type': 'application/x-www-form-urlencoded'
+  //     },
+  //     success: function (res) {
+  //       var status = res.data.status;
+  //       if (status == 1) {
 
-          return false;
-        } else {
-          return false;
-        }
+  //         return false;
+  //       } else {
+  //         return false;
+  //       }
 
-      },
+  //     },
 
-    })
-  },
+  //   })
+  // },
   login: function () {
     var that = this;
     wx.request({

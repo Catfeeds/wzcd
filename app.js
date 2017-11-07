@@ -18,6 +18,7 @@ App({
     wx.setStorageSync('logs', logs);
     this.getUserInfo();
     if(that.api.is_chong == 1){
+      console.log('app.js')
       var is_shou = setInterval(function () {
         that.getResult();
       }, 2000);
@@ -158,19 +159,22 @@ App({
       success: function (res) {
         var status = res.data.status;
         if (status == 1) {
-          that.api.is_chong = 0;
-          var is_shou = that.data.is_shou;
-          clearInterval(is_shou);
-          // that.openDoor();
+          var is_shou = that.api.is_shou;
+          
           that.setData({
             amount: res.data.info.amount,
             chong_time: res.data.info.chong_time
           });
-          that.makeOrder();
+          if (app.api.is_chong == 1) {
+            that.makeOrder();
+          }
+          clearInterval(is_shou);
+          that.api.is_chong = 0;
+          
 
         } else if(status == 2){
           app.api.is_chong = 0;
-          var is_shou = that.data.is_shou;
+          var is_shou = that.api.is_shou;
           clearInterval(is_shou);
           
         } else if (status == 15) {
@@ -231,32 +235,32 @@ App({
       }
     })
   },
-  openDoor: function () {
-    var that = this;
-    wx.request({
-      url: that.api.hostUrl + '/Api/User/openDoor2',
-      method: 'post',
-      data: {
-        userId: that.api.userId,
-        sid: that.api.sid,
-        ppileid: that.api.ppileid,
-      },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      success: function (res) {
-        var status = res.data.status;
-        if (status == 1) {
+  // openDoor: function () {
+  //   var that = this;
+  //   wx.request({
+  //     url: that.api.hostUrl + '/Api/User/openDoor2',
+  //     method: 'post',
+  //     data: {
+  //       userId: that.api.userId,
+  //       sid: that.api.sid,
+  //       ppileid: that.api.ppileid,
+  //     },
+  //     header: {
+  //       'Content-Type': 'application/x-www-form-urlencoded'
+  //     },
+  //     success: function (res) {
+  //       var status = res.data.status;
+  //       if (status == 1) {
 
-          return false;
-        } else {
-          return false;
-        }
+  //         return false;
+  //       } else {
+  //         return false;
+  //       }
 
-      },
+  //     },
 
-    })
-  },
+  //   })
+  // },
   login: function () {
     var that = this;
     wx.request({

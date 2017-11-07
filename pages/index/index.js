@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 var app = getApp();
+
 Page({
   data: {
      showModalStatus: false,  //先设置隐藏
@@ -94,9 +95,7 @@ Page({
      * 弹窗
      */
   showDialogBtn: function () {
-    // this.setData({
-    //   showModal: true
-    // });
+
     var is_qing = this.data.is_qing;
     if(is_qing == 1){
       wx.navigateTo({
@@ -275,6 +274,7 @@ Page({
   onLoad: function (options) {
     
     var that = this;
+
     var ppileid = options.ppileid;
     app.api.ppileid = ppileid;
     that.setData({
@@ -467,15 +467,18 @@ Page({
       success: function (res) {
         var status = res.data.status;
         if (status == 1) {
-          app.api.is_chong = 0;
           var is_shou = that.data.is_shou;
-          clearInterval(is_shou);
-          // that.opanDoor();
+          
           that.setData({
             amount: res.data.info.amount,
             chong_time: res.data.info.chong_time
           });
-          that.makeOrder();
+          if (app.api.is_chong == 1) {
+            that.makeOrder();
+          }
+          clearInterval(is_shou);
+          app.api.is_chong = 0;
+         
 
         } else if(status == 2){
           var is_shou = that.data.is_shou;
@@ -539,32 +542,32 @@ Page({
       }
     })
   },
-  openDoor:function () {
-    var that = this;
-    wx.request({
-      url: app.api.hostUrl + '/Api/User/openDoor2',
-      method: 'post',
-      data: {
-        userId: app.api.userId,
-        sid: app.api.sid,
-        ppileid:app.api.ppileid,
-      },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      success: function (res) {
-        var status = res.data.status;
-        if (status == 1) {
+  // openDoor:function () {
+  //   var that = this;
+  //   wx.request({
+  //     url: app.api.hostUrl + '/Api/User/openDoor2',
+  //     method: 'post',
+  //     data: {
+  //       userId: app.api.userId,
+  //       sid: app.api.sid,
+  //       ppileid:app.api.ppileid,
+  //     },
+  //     header: {
+  //       'Content-Type': 'application/x-www-form-urlencoded'
+  //     },
+  //     success: function (res) {
+  //       var status = res.data.status;
+  //       if (status == 1) {
          
-          return false;
-        } else {
-          return false;
-        }
+  //         return false;
+  //       } else {
+  //         return false;
+  //       }
         
-      },
+  //     },
      
-    })
-  },
+  //   })
+  // },
 
   // onShareAppMessage: function () {
   //   return {
